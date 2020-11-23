@@ -1,1 +1,8 @@
 /API
+# initial work I did using the MET API, not relevant for project
+
+/data
+headings.md
+MaxErnstTitles.csv
+Titles_Artist.csv
+# titles and the artists -- for reference, irrelevant for model training

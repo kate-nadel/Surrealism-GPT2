@@ -4,27 +4,24 @@ import csv
 # Met_objects = pd.read_csv("https://media.githubusercontent.com/media/metmuseum/openaccess/master/MetObjects.csv")
 
 
-# artists = []
+artists = ["Max Ernst", "Salvador Dalí", "May Ray", "Giorgio de Chirico", "Pablo Picasso", "Marcel Duchamp", "Francis Picabia", "André Masson", "Joan Miró", "Joan Miró", "René Magritte", "Paul Delvaux", "Yves Tanguy", "Matta", "Frida Kahlo", "Diego Rivera", "Diego Rivera", "Dorothea Tanning", "Leonora Carrington", "Hans Bellmer", "Roland Penrose", "Stella Snead", "Jean Arp", "Luis Buñuel", "Bridget Bate Tichenor", "Toyen", "Leonor Fini", "Dora Maar", "Kay Sage"]
 
 
 
 with open("data/MetObjects.csv", "r") as artwork_csv:
     processed_csv = csv.reader(artwork_csv)
 
-    with open("Met_Surrealist_Artists6.csv", "w") as csvout:
+    with open("Met_Surrealist_Titles.csv", "w") as csvout:
         writeable_csv = csv.writer(csvout)
 
         for row in processed_csv:
 
-            if "Salvador Dalí" in row[18]:
+            found_artist = False
+            for a in artists:
+                    if a in row[18]:
+                            found_artist = True
 
-                # print(row[9], row[18]) #this seems  to work
+            if found_artist == True:
                 array_title = row[9].split(',')
-                array_artist = row[18].split(',')
-                writeable_csv.writerow(array_title), writeable_csv.writerow(array_artist)
-                # writeable_csv.writerow(row[9][18])    ##this writes the whole document to new CSV
-                # writeable_csv.writerow(row["Title"], row["Artist Display Name"])  ##this doesn't work at all
-
-# title row = index 9
-# Artist Display Name = index 18
-#or "Salvador Dalí" or "May Ray" or "Giorgio de Chirico" or "Pablo Picasso" or "Marcel Duchamp" or "Francis Picabia" or "André Masson" or "Joan Miró" or "Joan Miró" or "René Magritte" or "Paul Delvaux" or "Yves Tanguy" or "Matta" or "Frida Kahlo" or "Diego Rivera" or "Diego Rivera" or "Dorothea Tanning" or "Leonora Carrington" or "Hans Bellmer" or "Roland Penrose" or "Stella Snead" or "Jean Arp" or "Luis Buñuel" or "Bridget Bate Tichenor" or "Toyen" or "Leonor Fini" or "Dora Maar" or "Kay Sage"
+                writeable_csv.writerow(array_title)
+                 #writeable_csv.writerow(array_artist)
