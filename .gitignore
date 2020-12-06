@@ -1,8 +1,26 @@
-/API
-# initial work I did using the MET API, not relevant for project
 
+# initial work I did using the MET API, not relevant for project
+/API
+
+# includes the MET dataset, unnecessary for git tracking
 /data
+
+# headings from dataset for reference
 headings.md
+
+# playing around with downloading titles -- for reference, irrelevant for model training
 MaxErnstTitles.csv
 Titles_Artist.csv
-# titles and the artists -- for reference, irrelevant for model training
+
+# pretty much everything for my twitter bot is here bc it has my secret keys!
+# the generic version of lambda_function.py is in the /twitter_bot folder without my keys
+API_keys.txt
+/twitter_bot/API_keys.txt
+/twitter_bot/deploy_bot.zip
+/twitter_bot/deploy_bot/
+/twitter_bot/lambda_function.py
+/twitter_bot/tweepyAPI(copy.py)
+/twitter_bot/Surrealist_tweets_compiled_copy.json
+
+# backup generated titles in txt form just because
+gpt_titles_backup.txt
