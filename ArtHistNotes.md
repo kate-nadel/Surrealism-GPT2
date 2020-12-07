@@ -4,6 +4,8 @@ This list can be added to or changed based on feedback and further research.
 
 I started with the most well known names, searched through exhibitions to find new (to me) artists, and emphasized included women in this list, many of whom have been overlooked for their contributions and involvement in these movements.
 
+Some of these artists may not have personally associated with the Surrealist movement but I've included them because of their influence to the movement.
+
 
 Salvador Dalí
 Max Ernst
