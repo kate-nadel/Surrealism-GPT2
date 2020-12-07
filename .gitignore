@@ -24,3 +24,16 @@ API_keys.txt
 
 # backup generated titles in txt form just because
 gpt_titles_backup.txt
+
+
+#files from first round of training
+/gpt2_model/Surrealist_tweets.json
+/gpt2_model/Surrealist_tweets1.json
+/gpt2_model/Surrealist_tweets4.json
+/gpt2_model/Surrealist_tweets5.json
+/gpt2_model/Surrealist_tweets6.json
+
+# files from model
+/gpt2_model/checkpoint/
+/gpt2_model/models/
+/gpt2_model/samples
