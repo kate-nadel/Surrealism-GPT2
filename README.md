@@ -2,8 +2,16 @@
 Final project for Programming for Cultural Heritage @ Pratt Institute. Fall 2020 with Matt Miller.
 
 
+## The project
+This project uses GPT2 and titles of works of art from the Metropolitan Museum of Art's dataset to generate new unique titles of works of art that don't exist. Through this work I realized that my training dataset was too small to generate many new titles (it only produced around 90 titles), so I decided to include titles from the training data (titles of paintings that do exist) to create a dataset of REAL and FAKE titles which are then posted automatically to twitter using a twitter bot.
+
+Ultimately I wanted to create a deliverable that would encourage people to engage playfully with art. Surrealism (and the movements it has inspired) encourages this kind play, reflection, and use of the reconstruction/détournement/transformation of material.
+
+The bot is [@SurrealArtBot](twitter.com/surrealartbot)
+
 ## Motivation and purpose
-Blah :)
+I wanted to explore the technical aspects of GPT2 and Twitter bots. There are playful and nefarious uses of both, and both have come under recent scrutiny for their ability to deceive. I wanted to see for myself how they work, in order to more fully understand what is happening when a bot posts, or a joke is made using text generating. Also, I wanted to focus these interests towards an art-related application.
+
 
 Please see my notes on the art history aspect of this project in the ArtHistNotes file.
 
