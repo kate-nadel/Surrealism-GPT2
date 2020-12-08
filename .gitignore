@@ -1,5 +1,5 @@
 
-# initial work I did using the MET API, not relevant for project
+# initial work I tried to do using the MET API, not relevant for project
 /API
 
 # includes the MET dataset, unnecessary for git tracking
@@ -8,7 +8,7 @@
 # headings from dataset for reference
 headings.md
 
-# playing around with downloading titles -- for reference, irrelevant for model training
+# playing around with downloading titles -- irrelevant for model training
 MaxErnstTitles.csv
 Titles_Artist.csv
 
@@ -37,3 +37,9 @@ gpt_titles_backup.txt
 /gpt2_model/checkpoint/
 /gpt2_model/models/
 /gpt2_model/samples
+
+# old model (first try, it kept adding the steps to the previous steps and I wanted to redo)
+/gpt2_model/old/
+
+# first bot
+/twitter_bot/old/

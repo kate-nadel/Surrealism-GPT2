@@ -1,4 +1,5 @@
-# saving the text generated when run at 1000 steps
+# saving the text generated when run at 200 steps
+
 import gpt_2_simple as gpt2
 import json
 
@@ -10,5 +11,5 @@ gpt2.load_gpt2(sess)
 
 text = gpt2.generate(sess, return_as_list=True, batch_size=5, nsamples=5)
 
-with open ("GPT2_Surrealist_Text_new.json", "w") as output:
+with open ("GPT2_Surrealist_Text_200new.json", "w") as output:
     json.dump(text, output, indent=2)

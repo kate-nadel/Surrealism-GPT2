@@ -1,4 +1,5 @@
 # THIS IS THE MODEL. It downloads the model and runs it on the training data.
+
 import gpt_2_simple as gpt2
 import os
 import requests
@@ -25,6 +26,6 @@ sess = gpt2.start_tf_sess()
 gpt2.finetune(sess,
               file_name,
               model_name=model_name,
-              steps=1000)   # steps is max number of training steps
+              steps=200)   # steps is max number of training steps
 
 gpt2.generate(sess)
