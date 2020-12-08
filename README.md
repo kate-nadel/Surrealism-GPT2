@@ -9,17 +9,18 @@ Please see my notes on the art history aspect of this project in the ArtHistNote
 
 ## Workflow
 
-1. Download the <a href="https://github.com/metmuseum/openaccess">MetObject CSV</a>, and run the data.py script to write out a CSV of only the titles of works of art by artists who are considered Surrealist (see the ArtHistNotes file for my process for selecting artists and issues with the methodology)
+### Get data
+ Download the <a href="https://github.com/metmuseum/openaccess">MetObject CSV</a>, and run the data.py script to write out a CSV of only the titles of works of art by artists who are considered Surrealist (see the ArtHistNotes file for my process for selecting artists and issues with the methodology). Use the data.py file to generate this list of works.
 
-This new file is called Met_Surrealist_Titles.txt - I train the GPT-simple model on this file
+ This new file is called Met_Surrealist_Titles.txt - I train the GPT-simple model on this file
 
-2. Install <a href="https://brew.sh/">Homebrew</a> and <a href="https://github.com/pyenv/pyenv#locating-the-python-installation">pyenv</a>. GPT2 works with older version of tensorflow which requires an older version of python. I had issues with pyenv because I have another python environment manager installed, but found that adding ```eval "$(pyenv init -)"``` manually after setting the python version to 3.5.10 using ```pyenv global 3.5.10``` worked fine. You can check which version of python is running by running ```python -V```
 
-3. GPT2
-https://github.com/openai/gpt-2
-https://github.com/minimaxir/gpt-2-simple
+### GPT2
+[Info on OpenAI's GPT2](https://github.com/openai/gpt-2)
 
-Using the gpt2_test.py script, run the model on the training data. I did this multiple times to see how many steps would generate the best results. Ultimately 200 steps generated the longest list of unique titles. While 1000 steps overfitted the model and result in the fewest unique generations. This training data was fairly small, ~825 samples to train from, and the text lengths are quite small (because they're titles rather than speech, tweets, etc). So 200 steps worked best.
+Install <a href="https://brew.sh/">Homebrew</a> and <a href="https://github.com/pyenv/pyenv#locating-the-python-installation">pyenv</a>. GPT2 works with older version of tensorflow which requires an older version of python. I had issues with pyenv because I have another python environment manager installed, but found that adding ```eval "$(pyenv init -)"``` manually after setting the python version to 3.5.10 using ```pyenv global 3.5.10``` worked fine. You can check which version of python is running by running ```python -V```
+
+Read documentation for Max Woolf's [GPT2-simple](https://github.com/minimaxir/gpt-2-simple), which includes scripts for installing the model. Using the gpt2_test.py script, download & run the model on the training data. I did this multiple times to see how many steps would generate the best results. Ultimately 200 steps generated the longest list of unique titles. While 1000 steps overfitted the model and result in the fewest unique generations. This training data was fairly small, ~825 samples to train from, and the text lengths are quite small (because they're titles rather than speech, tweets, etc). So 200 steps worked best.
 
 Generated text will appear in the terminal screen.
 
@@ -31,7 +32,7 @@ Every time I ran the model, some of the original titles were included in the new
 
 What I did was duplicate this file, and then throw as many real titles from the original dataset as there were generated titles. I randomly interspersed them, and intentionally didn't include any that were redundant, boring, or could be triggering. Who needs redundant, boring, or triggering?
 
-4. Twitterbot
+### Twitterbot
 Make an account for your bot and sign up for developer account on Twitter.
 
 Make an account on AWS to use their Lambda to run your code server-less. In Lambda you'll be able to set an "event" which which trigger your code to run as often as you'd like, at specific recurring times.
