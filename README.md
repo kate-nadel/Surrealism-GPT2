@@ -9,11 +9,14 @@ Ultimately I wanted to create a deliverable that would encourage people to engag
 
 The bot is [@SurrealArtBot](twitter.com/surrealartbot)
 
+![](https://github.com/perceptionmgmt/Surrealism-GPT2/raw/main/image.jpeg)
+
 ## Motivation and purpose
 I wanted to explore the technical aspects of GPT2 and Twitter bots. There are playful and nefarious uses of both, and both have come under recent scrutiny for their ability to deceive. I wanted to see for myself how they work, in order to more fully understand what is happening when a bot posts, or a joke is made using text generating. Also, I wanted to focus these interests towards an art-related application.
 
 
 Please see my notes on the art history aspect of this project in the ArtHistNotes file.
+
 
 ## Workflow
 
